@@ -338,11 +338,6 @@ pipeline {
                 '''
             }
         }
-        stage('Trivy FS Scan') {
-            steps {
-                sh 'trivy fs . > trivyfs.txt'
-            }
-        }
         stage('Docker Build & Push') {
             steps {
                 script {
@@ -813,3 +808,4 @@ Click on Dashboards in the left pane, you can see both the dashboards you have j
 Final:
 
 Delete all the resources created
+
